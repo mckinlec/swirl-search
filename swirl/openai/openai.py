@@ -20,7 +20,7 @@ class OpenAIClient:
     but allows overriding with a custom base URL.
     Throws ValueError when no key is configured or passed in.
     """
-    def __init__(self, usage, key=None, base_url="http://localhost:5000"):
+    def __init__(self, usage, key=None, base_url="http://localhost:5000/v1"):
         if usage not in [AI_RAG_USE, AI_REWRITE_USE, AI_QUERY_USE]:
             raise NotImplementedError(f"Unknown AI {usage}. Client initialization not supported.")
 
